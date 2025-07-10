@@ -66,19 +66,27 @@ eduverse-api/
 └── README.md
 ```
 
-## 🧪 Sample Endpoints
+## 📬 API Endpoints Overview
 
-### User
-- `POST /user/signup` — Register new user
-- `POST /user/login` — Login user
-- `GET /user/purchases` — Get all purchased courses (JWT required)
+### 🔑 Auth
 
-### Admin
-- `POST /admin/signup` — Register new admin
-- `POST /admin/login` — Login admin
-- `POST /admin/course` — Create new course (JWT required)
-- `PUT /admin/course` — Update course
-- `GET /admin/course/bulk` — View all created courses
+| Method | Route              | Description       |
+|--------|--------------------|-------------------|
+| POST   | `/user/signup`     | Register new user |
+| POST   | `/user/login`      | Login user        |
+| POST   | `/admin/signup`    | Register admin    |
+| POST   | `/admin/login`     | Login admin       |
+
+### 🎓 Courses (Admin & User)
+
+| Method | Route                  | Protected | Description                             |
+|--------|------------------------|-----------|-----------------------------------------|
+| POST   | `/admin/course`        | ✅ Admin   | Create a new course                     |
+| PUT    | `/admin/course`        | ✅ Admin   | Update an existing course               |
+| GET    | `/admin/course/bulk`   | ✅ Admin   | Get all courses created by the admin    |
+| POST   | `/course/purchase`     | ✅ User    | Purchase a course                       |
+| GET    | `/course/preview`      | ❌ Public  | View all available courses              |
+| GET    | `/user/purchases`      | ✅ User    | View all courses purchased by the user  |
 
 ---
 
