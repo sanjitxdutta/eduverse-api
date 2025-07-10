@@ -52,15 +52,17 @@ This project is designed to demonstrate real-world backend engineering skills an
 ```
 eduverse-api/
 ├── middleware/
-│ ├── admin.js
-│ └── user.js
+│ ├── admin.js    # Admin auth middleware
+│ └── user.js    # User auth middleware
 ├── routes/
-│ ├── admin.js
-│ ├── user.js
-│ └── course.js (optional)
-├── db.js
-├── index.js
-├── .env
+│ ├── admin.js    # Admin endpoints
+│ ├── course.js    # Course endpoints (via admin)
+│ └── user.js    # User endpoints
+├── db.js    # Mongoose schemas and models
+├── index.js    # Server entry point
+├── .env    # Secret config (local)
+├── .env.example    # Sample env file
+├── package.json
 └── README.md
 ```
 
@@ -83,9 +85,9 @@ eduverse-api/
 ## 🧾 Environment Variables
 
 Create a `.env` file in the root folder with the following:
-MONGODB_URI=mongodb+srv://youruser:yourpass@yourcluster.mongodb.net/eduverse
-JWT_SECRET_USER=your_user_secret
-JWT_SECRET_ADMIN=your_admin_secret
+- MONGODB_URI=mongodb+srv://youruser:yourpass@yourcluster.mongodb.net/eduverse
+- JWT_SECRET_USER=your_user_secret
+- JWT_SECRET_ADMIN=your_admin_secret
 
 ---
 
