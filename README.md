@@ -113,8 +113,6 @@ node index.js
 
 ## ✨ Author
 Sanjit Dutta
-📍 India | 💻 Backend Developer
-GitHub | LinkedIn
 
 ---
 
